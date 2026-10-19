@@ -1,5 +1,9 @@
 # Auditoría previa al lanzamiento · 19 de octubre de 2026
 
+> **Nota:** esta auditoría se hizo cuando el canal iba a ser de tutoriales largos. El canal pasó
+> después a Shorts «¿Sabías que…?» y los vídeos que revisa ya no existen como tales. Su arreglo
+> principal sigue valiendo: comprobar los datos antes de grabar.
+
 El canal todavía no tiene vídeos publicados, así que esto no es una auditoría completa. Revisa lo
 que va a salir: los dos primeros vídeos escritos y los dos planes semanales. La auditoría de verdad
 se hace con 4–6 vídeos publicados y la retención exportada (`/yt-retention`).
