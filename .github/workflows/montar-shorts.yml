@@ -18,7 +18,7 @@ on:
   workflow_dispatch:
     inputs:
       rehacer:
-        description: "Número de un Short para volver a montarlo (por ejemplo 11). Vacío: solo los pendientes."
+        description: "Shorts que volver a montar, separados por comas (por ejemplo 2,13,16). Vacío: solo los pendientes."
         required: false
         default: ""
       probar_subida:
@@ -64,11 +64,10 @@ jobs:
       - name: Elegir los Shorts pendientes
         id: pendientes
         run: |
-          rehacer="${{ github.event.inputs.rehacer }}"
-          if [ -n "$rehacer" ]; then
-            id=$(printf '%02d' "$rehacer")
+          for n in $(echo "${{ github.event.inputs.rehacer }}" | tr ',' ' '); do
+            id=$(printf '%02d' "$((10#$n))")
             gh release delete "short-$id" --yes --cleanup-tag 2>/dev/null || true
-          fi
+          done
           lista=""
           for f in contenido/youtube/shorts/datos/*.json; do
             id=$(jq -r .id "$f")

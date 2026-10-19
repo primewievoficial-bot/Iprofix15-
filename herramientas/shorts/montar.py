@@ -54,10 +54,21 @@ def limpiar_html(t):
 def licencia_valida(nombre):
     return bool(nombre) and LICENCIA_OK.match(nombre.strip()) and not LICENCIA_NO.search(nombre)
 
+VACIAS = {"a", "an", "the", "of", "at", "on", "in", "and", "for", "to", "with", "from", "by"}
+
+def palabras(texto):
+    return set(re.findall(r"[a-z0-9]+", (texto or "").lower()))
+
+def encaja(consulta, *textos):
+    """Una imagen solo vale si todas las palabras de la búsqueda están en su título o descripción.
+    Los buscadores devuelven resultados muy sueltos (por «at sign», el cartel de Hollywood)."""
+    buscadas = palabras(consulta) - VACIAS
+    return bool(buscadas) and buscadas <= set().union(*(palabras(t) for t in textos))
+
 def buscar_commons(consulta, usadas):
     q = urllib.parse.urlencode({
         "action": "query", "format": "json", "generator": "search", "gsrnamespace": 6,
-        "gsrsearch": f"{consulta} filetype:bitmap", "gsrlimit": 15, "prop": "imageinfo",
+        "gsrsearch": f"{consulta} filetype:bitmap", "gsrlimit": 30, "prop": "imageinfo",
         "iiprop": "url|size|mime|extmetadata", "iiurlwidth": 1280})
     datos = http_json(f"https://commons.wikimedia.org/w/api.php?{q}")
     paginas = sorted(datos.get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
@@ -69,6 +80,9 @@ def buscar_commons(consulta, usadas):
             continue
         if not licencia_valida(lic) or info.get("descriptionurl") in usadas:
             continue
+        desc = limpiar_html(meta.get("ImageDescription", {}).get("value", ""))
+        if not encaja(consulta, p["title"], desc):
+            continue
         return {"url": info.get("thumburl") or info["url"], "pagina": info["descriptionurl"],
                 "autor": limpiar_html(meta.get("Artist", {}).get("value", "")) or "Desconocido",
                 "licencia": lic, "origen": "Wikimedia Commons",
@@ -76,10 +90,13 @@ def buscar_commons(consulta, usadas):
     return None
 
 def buscar_openverse(consulta, usadas):
-    q = urllib.parse.urlencode({"q": consulta, "license": "by,by-sa,cc0,pdm", "page_size": 15,
+    q = urllib.parse.urlencode({"q": consulta, "license": "by,by-sa,cc0,pdm", "page_size": 30,
                                 "mature": "false"})
     for r in http_json(f"https://api.openverse.org/v1/images/?{q}").get("results", []):
         if (r.get("width") or 0) < 640 or r.get("foreign_landing_url") in usadas:
+            continue
+        etiquetas = " ".join(t.get("name", "") for t in r.get("tags") or [])
+        if not encaja(consulta, r.get("title"), etiquetas):
             continue
         lic = f"CC {r['license'].upper()} {r.get('license_version') or ''}".strip()
         if r["license"] in ("cc0", "pdm"):
