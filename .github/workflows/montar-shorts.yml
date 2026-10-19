@@ -12,12 +12,17 @@ on:
       - "herramientas/shorts/**"
       - ".github/workflows/montar-shorts.yml"
   schedule:
-    # Jueves a las 10:30 UTC, después de la tarea programada que escribe los Shorts.
-    - cron: "30 10 * * 4"
+    # Cada día a las 10:30 UTC: monta lo pendiente y sigue subiendo a YouTube si el día anterior
+    # se agotó la cuota de la API (unas 6 subidas al día).
+    - cron: "30 10 * * *"
   workflow_dispatch:
     inputs:
       rehacer:
         description: "Número de un Short para volver a montarlo (por ejemplo 11). Vacío: solo los pendientes."
+        required: false
+        default: ""
+      probar_subida:
+        description: "Número de un Short para probar la subida a YouTube (queda privado y no se marca como subido)."
         required: false
         default: ""
 
@@ -86,3 +91,57 @@ jobs:
             echo "::error::$fallos Short(s) sin montar. Se reintentarán en la próxima ejecución."
             exit 1
           fi
+
+      # Prueba de credenciales: sube un Short como privado, sin programar y sin marcarlo como subido.
+      - name: Probar la subida a YouTube
+        if: always() && github.event.inputs.probar_subida != ''
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          SHORTS_SOLO_PRIVADO: "1"
+        run: |
+          id=$(printf '%02d' "${{ github.event.inputs.probar_subida }}")
+          mkdir -p prueba
+          gh release download "short-$id" --dir prueba --clobber
+          python3 herramientas/shorts/subir.py "contenido/youtube/shorts/datos/$id.json" \
+            "prueba/$id.mp4" "prueba/$id-descripcion.txt"
+
+      # Subida real. Necesita los secretos YT_CLIENT_ID, YT_CLIENT_SECRET y YT_REFRESH_TOKEN y la
+      # variable del repositorio YT_SUBIR = si (ver contenido/youtube/SUBIR_A_YOUTUBE.md). Sube cada
+      # Short con fecha cuya release aún no tenga enlace de YouTube, programado para su día, y anota
+      # el enlace en la release.
+      - name: Subir a YouTube
+        if: always() && vars.YT_SUBIR == 'si'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          if [ -z "$YT_REFRESH_TOKEN" ]; then
+            echo "::error::YT_SUBIR está activado pero faltan los secretos de YouTube."
+            exit 1
+          fi
+          mkdir -p subida
+          for f in contenido/youtube/shorts/datos/*.json; do
+            id=$(jq -r .id "$f")
+            [ "$(jq -r .publicacion "$f")" = "null" ] && continue
+            notas=$(gh release view "short-$id" --json body -q .body 2>/dev/null) || continue
+            echo "$notas" | grep -q "youtu.be/" && continue
+            gh release download "short-$id" --dir subida --clobber
+            set +e
+            vid=$(python3 herramientas/shorts/subir.py "$f" "subida/$id.mp4" "subida/$id-descripcion.txt")
+            codigo=$?
+            set -e
+            if [ "$codigo" -eq 3 ]; then
+              echo "Cuota diaria agotada; se sigue mañana."
+              break
+            elif [ "$codigo" -ne 0 ]; then
+              echo "::error::No se pudo subir el Short $id"
+              exit 1
+            fi
+            if [ -n "$vid" ]; then
+              printf '%s\n\nYouTube: https://youtu.be/%s\n' "$notas" "$vid" > "subida/$id-notas.txt"
+              gh release edit "short-$id" --notes-file "subida/$id-notas.txt"
+            fi
+          done

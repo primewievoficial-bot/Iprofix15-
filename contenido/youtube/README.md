@@ -11,7 +11,9 @@ vídeo, con la voz de **Dani**, el presentador ficticio del canal (ver `.claude/
    sintética y subtítulos. Cada Short queda como descarga en
    [Releases](https://github.com/primewievoficial-bot/Iprofix15-/releases) (`short-NN`), con su
    descripción, fuentes y atribuciones listas para pegar.
-3. **Lo único manual:** subir el MP4 a YouTube el día que toca.
+3. **Subida a YouTube:** preparada, pero pendiente de las credenciales del canal y de la auditoría de
+   Google. Pasos en [`SUBIR_A_YOUTUBE.md`](SUBIR_A_YOUTUBE.md). Hasta entonces, se sube cada MP4 a
+   mano el día que toca.
 
 Detalles en [`AUTOMATIZACION.md`](AUTOMATIZACION.md). Código del montaje en `herramientas/shorts/`.
 
