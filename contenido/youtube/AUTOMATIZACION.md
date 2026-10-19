@@ -155,12 +155,9 @@ El resumen final de la sesión dice:
 
 ## Subir a YouTube
 
-Los vídeos quedan en las releases de GitHub, cada uno con su descripción. Para que también se suban
-solos haría falta:
+El flujo también sube los Shorts a YouTube (`herramientas/shorts/subir.py`), programados para su día
+a las 18:00, en cuanto el canal tiene credenciales y la variable `YT_SUBIR = si`. Los pasos para
+activarlo están en [`SUBIR_A_YOUTUBE.md`](SUBIR_A_YOUTUBE.md).
 
-1. un proyecto de Google Cloud con la YouTube Data API activada y credenciales OAuth del canal;
-2. guardar esas credenciales como secretos del repositorio;
-3. y, para que salgan **públicos**, pasar la auditoría de Google para apps de la API: sin ella, los
-   vídeos subidos por la API quedan en privado.
-
-Mientras tanto, subir cada Short es abrir su release, descargar el MP4 y pegar la descripción.
+Mientras no esté activado, subir cada Short es abrir su release, descargar el MP4 y pegar la
+descripción.
