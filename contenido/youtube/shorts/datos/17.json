@@ -6,7 +6,7 @@
   "bloques": [
     {
       "texto": "¿Sabías que el primer «bug» de un ordenador, en 1947, era una polilla de verdad? Pero la palabra «bug» es más antigua. ¿Por qué?",
-      "imagen": "first computer bug moth logbook"
+      "imagen": "First Computer Bug"
     },
     {
       "texto": "En un ordenador enorme de Harvard, el Mark II, encontraron una polilla atascada en una pieza. La sacaron y la pegaron en el cuaderno de registro con una nota: «primer caso real de bug encontrado».",
@@ -18,7 +18,7 @@
     },
     {
       "texto": "Así que la polilla no inventó la palabra. Solo la hizo literal.",
-      "imagen": "computer error"
+      "imagen": "computer error message"
     }
   ],
   "fuentes": [

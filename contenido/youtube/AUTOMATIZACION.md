@@ -27,9 +27,9 @@ CC BY-SA: hay que pegarla entera en YouTube.
 
 Para probar sin internet: `python3 herramientas/shorts/montar.py datos/11.json --sin-red`.
 
-Para volver a montar un Short (por ejemplo, si una imagen no encaja): en GitHub, Actions > Montar
-Shorts > Run workflow, con su número en «rehacer». También se puede cambiar la búsqueda de imagen de
-ese bloque en su JSON: al fusionarlo no se rehace solo, hay que usar «rehacer».
+Para volver a montar Shorts (por ejemplo, si una imagen no encaja): en GitHub, Actions > Montar
+Shorts > Run workflow, con sus números separados por comas en «rehacer». También se puede cambiar la
+búsqueda de imagen de ese bloque en su JSON: al fusionarlo no se rehace solo, hay que usar «rehacer».
 
 ## Procedimiento de escritura (para la tarea del jueves)
 
@@ -103,8 +103,12 @@ lo que dicen, «Ojo» si hay matices, el guion y el bucle.
 
 - **Cuatro bloques**, 75–110 palabras en total (30–45 segundos de voz).
 - **`texto`** es exactamente lo que se locuta: sin acotaciones ni `[EN PANTALLA]`.
-- **`imagen`** es una búsqueda **en inglés**, de 1 a 4 palabras, de algo concreto que exista en
-  Wikimedia Commons: un objeto, un lugar, una persona conocida, un logo. Evitar conceptos abstractos.
+- **`imagen`** es una búsqueda **en inglés**, de 1 a 3 palabras, de algo concreto que exista en
+  Wikimedia Commons: un objeto, un lugar, una persona conocida, una marca. El montador solo acepta
+  una imagen si **todas** las palabras de la búsqueda aparecen en su título o descripción, así que
+  cuantas menos y más concretas, mejor («Albert Einstein», «QR code», «Jelling stone»). Evitar
+  conceptos abstractos y palabras sueltas muy genéricas («sign», «light»): si no hay coincidencia,
+  el bloque sale con una tarjeta de texto.
 - **`publicacion`** es la fecha prevista; `null` en las reservas.
 - **Una reserva que se programa** ya tiene su JSON: solo hay que cambiar su `publicacion`.
 - Validar que el JSON se lee bien (`python3 -c "import json,sys; json.load(open(sys.argv[1]))" archivo`).
