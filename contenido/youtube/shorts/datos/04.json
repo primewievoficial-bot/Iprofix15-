@@ -1,0 +1,33 @@
+{
+  "id": "04",
+  "titulo": "¿Sabías que una pantalla cambiada puede verse más fría?",
+  "texto_pantalla": "¿MÁS FRÍA?",
+  "publicacion": "2026-10-26",
+  "bloques": [
+    {
+      "texto": "¿Sabías que una pantalla de iPhone cambiada puede verse más fría? Puede que hayas perdido el True Tone, y casi nadie sabe por qué.",
+      "imagen": "iPhone display"
+    },
+    {
+      "texto": "El True Tone ajusta los colores a la luz que hay a tu alrededor. Con una pantalla que no es la que traía el móvil, desaparece.",
+      "imagen": "smartphone screen color"
+    },
+    {
+      "texto": "El móvil funciona perfecto. Simplemente, ya no adapta los colores. Por eso, con luz cálida, se ve más azul.",
+      "imagen": "warm light lamp room"
+    },
+    {
+      "texto": "Así que no, no es tu vista. Es la pantalla.",
+      "imagen": "smartphone screen repair"
+    }
+  ],
+  "fuentes": [
+    "https://ifixit.com/Answers/View/511596/Why+isn't+true+tone+display+available+with+a+iFixit+replacement+screen",
+    "https://proxy.ifixit.com/Guide/How+To+Restore+True+Tone+After+Screen+Replacement+On+iPhone+XS/128934"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

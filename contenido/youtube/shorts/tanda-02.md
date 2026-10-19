@@ -6,8 +6,10 @@ sigue la automatización semanal (ver [`AUTOMATIZACION.md`](../AUTOMATIZACION.md
 
 - **Duración:** 30–45 segundos cada uno.
 - **Puntuaciones:** traducción literal al inglés pasada por `hookscore.py`, como en la tanda 1.
-- **Estado:** escritos, sin grabar. Las fuentes están comprobadas; lo que queda marcado como
-  «Antes de grabar» depende del rodaje.
+- **Estado:** fuentes comprobadas. **No se graba nada:** cada Short se monta solo a partir de su
+  `datos/NN.json`, con imágenes de licencia libre y voz sintética. Las acotaciones
+  `[EN PANTALLA]` y las notas «Antes de grabar» de abajo son de cuando se iba a grabar; el montaje
+  usa las búsquedas de imagen del JSON.
 
 ## Orden de publicación
 

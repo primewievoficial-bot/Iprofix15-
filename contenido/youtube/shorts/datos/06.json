@@ -1,0 +1,34 @@
+{
+  "id": "06",
+  "titulo": "¿Sabías que el primer iPhone no tenía App Store?",
+  "texto_pantalla": "2007",
+  "publicacion": "2026-10-30",
+  "bloques": [
+    {
+      "texto": "¿Sabías que el primer iPhone, en 2007, no tenía App Store? ¿Por qué te hizo Apple esperar un año entero?",
+      "imagen": "first generation iPhone 2007"
+    },
+    {
+      "texto": "Al principio, Steve Jobs quería que las apps de otras empresas fueran páginas web, abiertas desde Safari.",
+      "imagen": "Steve Jobs iPhone keynote"
+    },
+    {
+      "texto": "En octubre de 2007 cambió de idea. Y la App Store llegó en julio de 2008, con unas quinientas apps.",
+      "imagen": "App Store iPhone"
+    },
+    {
+      "texto": "Así que todas las apps que usas empezaron con un móvil que no podía instalar ninguna.",
+      "imagen": "smartphone home screen apps"
+    }
+  ],
+  "fuentes": [
+    "https://www.imore.com/history-app-store",
+    "https://macrumors.com/2022/12/23/missing-iphone-features",
+    "https://www.applesfera.com/curiosidades/que-iphone-original-no-tenia-app-store-como-cambio-vision-jobs-apps-terceros"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

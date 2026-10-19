@@ -1,0 +1,33 @@
+{
+  "id": "11",
+  "titulo": "¿Sabías que el GPS de tu móvil necesita a Einstein?",
+  "texto_pantalla": "¿EINSTEIN?",
+  "publicacion": "2026-11-02",
+  "bloques": [
+    {
+      "texto": "¿Sabías que el GPS de tu móvil fallaría sin Einstein? Los relojes de sus satélites van adelantados, y casi nadie sabe por qué.",
+      "imagen": "GPS navigation smartphone map"
+    },
+    {
+      "texto": "Allí arriba, la gravedad es más débil, y el tiempo pasa un poquito más rápido. Es lo que dice la relatividad de Einstein.",
+      "imagen": "GPS satellite"
+    },
+    {
+      "texto": "Unos 38 microsegundos al día. Parece nada. Pero el GPS calcula tu posición con el tiempo que tarda la señal en llegar, y ahí un microsegundo importa.",
+      "imagen": "atomic clock"
+    },
+    {
+      "texto": "Por eso esos relojes se ajustan antes de lanzarlos. Así que cada vez que abres el mapa, Einstein te está echando una mano.",
+      "imagen": "Albert Einstein"
+    }
+  ],
+  "fuentes": [
+    "https://www.techforspace.com/missions/galileo/gps-and-relativity/",
+    "https://iaps.info/?p=9486"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

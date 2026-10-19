@@ -1,0 +1,34 @@
+{
+  "id": "07",
+  "titulo": "¿Sabías que el modo oscuro solo ahorra batería en algunas pantallas?",
+  "texto_pantalla": "¿OLED O LCD?",
+  "publicacion": "2026-11-01",
+  "bloques": [
+    {
+      "texto": "¿Sabías que el modo oscuro puede ahorrarte batería, pero solo en pantallas OLED? En la tuya, puede que no ahorre casi nada.",
+      "imagen": "dark mode smartphone"
+    },
+    {
+      "texto": "En una pantalla OLED, cada píxel da su propia luz. Si es negro, se apaga. Y un píxel apagado no gasta.",
+      "imagen": "OLED display pixels"
+    },
+    {
+      "texto": "En una LCD, hay una luz detrás de toda la pantalla, siempre encendida. El negro tapa esa luz, pero la luz sigue gastando.",
+      "imagen": "LCD backlight"
+    },
+    {
+      "texto": "Así que, antes de poner el modo oscuro para ahorrar, mira qué pantalla tienes.",
+      "imagen": "smartphone display"
+    }
+  ],
+  "fuentes": [
+    "https://www.engadget.com/2019/10/21/dark-mode-ios-13-test/",
+    "https://businessinsider.nl/dark-mode-can-save-battery-but-only-if-your-device-has-an-oled-screen-heres-what-you-should-know/",
+    "https://www.scienceabc.com/innovation/does-the-dark-mode-on-the-computer-actually-save-electricity.html"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

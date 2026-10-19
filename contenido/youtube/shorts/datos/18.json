@@ -1,0 +1,33 @@
+{
+  "id": "18",
+  "titulo": "¿Sabías que la primera webcam vigilaba una cafetera?",
+  "texto_pantalla": "1991",
+  "publicacion": "2026-11-15",
+  "bloques": [
+    {
+      "texto": "¿Sabías que la primera webcam, en 1991, apuntaba a una cafetera? ¿Por qué? Porque nadie quería hacer el viaje para encontrársela vacía.",
+      "imagen": "Trojan Room coffee pot"
+    },
+    {
+      "texto": "Pasó en un laboratorio de la Universidad de Cambridge. La cafetera estaba en otra planta, y subir para nada era un rollo.",
+      "imagen": "University of Cambridge Computer Laboratory"
+    },
+    {
+      "texto": "Así que pusieron una cámara apuntándola, y cualquiera podía verla desde su ordenador. En blanco y negro, y casi sin resolución. Pero se veía si había café.",
+      "imagen": "coffee pot"
+    },
+    {
+      "texto": "Así que todas las videollamadas que haces empezaron con una cafetera.",
+      "imagen": "webcam"
+    }
+  ],
+  "fuentes": [
+    "https://en.wikipedia.org/wiki/Trojan_Room_coffee_pot",
+    "https://www.raspberrypi.com/news/coffee/"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

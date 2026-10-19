@@ -1,0 +1,33 @@
+{
+  "id": "15",
+  "titulo": "¿Sabías que el código QR se inventó para piezas de coche?",
+  "texto_pantalla": "1994",
+  "publicacion": "2026-11-09",
+  "bloques": [
+    {
+      "texto": "¿Sabías que el código QR que escaneas cada día se inventó en 1994 para piezas de coche? Antes de estar en la carta del bar, estaba en una fábrica.",
+      "imagen": "QR code"
+    },
+    {
+      "texto": "Un código de barras normal guarda poca información, y solo en una dirección. Una pieza complicada podía necesitar varias etiquetas.",
+      "imagen": "barcode"
+    },
+    {
+      "texto": "Un equipo de una empresa japonesa de piezas, Denso Wave, inventó un código que guarda mucho más. Y se puede leer aunque esté sucio o un poco roto.",
+      "imagen": "car factory assembly line"
+    },
+    {
+      "texto": "Así que la carta del bar se lee con un invento pensado para coches.",
+      "imagen": "QR code menu restaurant"
+    }
+  ],
+  "fuentes": [
+    "https://www.jpo.go.jp/e/news/koho/innovation/01_qrcode_e.html",
+    "https://en.wikipedia.org/wiki/QR_code"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

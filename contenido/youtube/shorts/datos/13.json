@@ -1,0 +1,33 @@
+{
+  "id": "13",
+  "titulo": "¿Sabías que el primer vídeo de YouTube dura menos de 20 segundos?",
+  "texto_pantalla": "2005",
+  "publicacion": "2026-11-06",
+  "bloques": [
+    {
+      "texto": "¿Sabías que el primer vídeo de YouTube, de 2005, dura menos de 20 segundos? Y casi no pasa nada. ¿Por qué es famoso?",
+      "imagen": "YouTube logo"
+    },
+    {
+      "texto": "Se llama «Me at the zoo». Sale un chico delante de los elefantes del zoo de San Diego, diciendo que tienen trompas muy largas. Y ya está.",
+      "imagen": "San Diego Zoo elephants"
+    },
+    {
+      "texto": "Pero el chico es Jawed Karim, uno de los fundadores de YouTube. Y es el primer vídeo que se subió a la plataforma.",
+      "imagen": "Jawed Karim"
+    },
+    {
+      "texto": "Así que todo YouTube empezó con unos elefantes.",
+      "imagen": "elephant"
+    }
+  ],
+  "fuentes": [
+    "https://en.wikipedia.org/wiki/Me_at_the_zoo",
+    "https://www.nbcboston.com/news/national-international/20-years-ago-an-18-second-video-recorded-at-the-san-diego-zoo-launched-youtube/3694100/?amp=1"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

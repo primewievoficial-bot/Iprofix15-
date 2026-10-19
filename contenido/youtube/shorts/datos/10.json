@@ -1,0 +1,33 @@
+{
+  "id": "10",
+  "titulo": "¿Sabías que Bluetooth se llama así por un rey vikingo?",
+  "texto_pantalla": "HARALD",
+  "publicacion": null,
+  "bloques": [
+    {
+      "texto": "¿Sabías que Bluetooth se llama así por Harald, un rey vikingo que murió hace más de mil años? Y ves sus iniciales cada día.",
+      "imagen": "Bluetooth logo"
+    },
+    {
+      "texto": "Le llamaban «Diente Azul». Unió a Dinamarca y Noruega en un solo reino.",
+      "imagen": "Jelling stones Harald Bluetooth"
+    },
+    {
+      "texto": "Por eso, en 1997, unos ingenieros le pusieron su nombre a una tecnología que une aparatos distintos. Y el logo junta sus iniciales en runas.",
+      "imagen": "runes runestone"
+    },
+    {
+      "texto": "Así que cada vez que conectas los cascos, saludas a un rey vikingo.",
+      "imagen": "wireless headphones"
+    }
+  ],
+  "fuentes": [
+    "https://www.bluetooth.com/about-us/bluetooth-origin/",
+    "https://skjalden.com/why-is-bluetooth-called-bluetooth/"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}
