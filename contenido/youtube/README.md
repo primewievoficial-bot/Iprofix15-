@@ -5,16 +5,26 @@ vídeo, con la voz de **Dani**, el presentador ficticio del canal (ver `.claude/
 
 Nada de esto está publicado. Cada archivo es un borrador listo para grabar y subir a mano.
 
+## Automatización
+
+Cada jueves por la mañana, una tarea programada escribe los cuatro Shorts y el plan de la próxima
+semana sin plan, con las fuentes buscadas en internet, y lo fusiona en `main`. El procedimiento está
+en [`AUTOMATIZACION.md`](AUTOMATIZACION.md). Grabar, montar y publicar siguen siendo trabajo de una
+persona.
+
 ## Shorts
 
-| Tanda | Shorts | Estado |
-|---|---|---|
-| [Tanda 1](shorts/tanda-01.md) | 10 (7 programados, 3 de reserva) | Escritos · sin grabar |
+| Tanda | Shorts | Fuentes | Estado |
+|---|---|---|---|
+| [Tanda 1](shorts/tanda-01.md) | 01–10 (7 programados, 3 de reserva) | Por comprobar (casillas) | Escritos · sin grabar |
+| [Tanda 2](shorts/tanda-02.md) | 11–20 (8 programados, 2 de reserva) | Comprobadas, con enlaces | Escritos · sin grabar |
 
 ## Planes semanales
 
 - [Semana del 19 al 25 de octubre](planes/semana-2026-10-19.md): Shorts 01–03
 - [Semana del 26 de octubre al 1 de noviembre](planes/semana-2026-10-26.md): Shorts 04–07
+- [Semana del 2 al 8 de noviembre](planes/semana-2026-11-02.md): Shorts 11–14
+- [Semana del 9 al 15 de noviembre](planes/semana-2026-11-09.md): Shorts 15–18
 
 ## Auditorías
 
@@ -24,8 +34,9 @@ Nada de esto está publicado. Cada archivo es un borrador listo para grabar y su
 
 ## La regla del canal
 
-**Ningún Short se graba sin su fuente comprobada.** Cada Short de la tanda tiene una casilla
-«Fuente a comprobar». Un canal de curiosidades vive de que lo que cuenta sea verdad.
+**Ningún Short se graba sin su fuente comprobada.** Un canal de curiosidades vive de que lo que
+cuenta sea verdad. Desde la tanda 2, las fuentes se buscan antes de escribir y van enlazadas en cada
+Short.
 
 ## Sobre las puntuaciones
 
