@@ -1,0 +1,33 @@
+{
+  "id": "12",
+  "titulo": "¿Sabías que «spam» viene de un sketch de los Monty Python?",
+  "texto_pantalla": "SPAM SPAM SPAM",
+  "publicacion": "2026-11-04",
+  "bloques": [
+    {
+      "texto": "¿Sabías que el «spam» se llama así por un sketch de los Monty Python de 1970? Pero nadie lo puede demostrar. ¿Por qué no?",
+      "imagen": "email inbox"
+    },
+    {
+      "texto": "En el sketch, todo lo que hay en la carta de un bar lleva Spam, una carne en lata. Y unos vikingos cantan «Spam, Spam, Spam» hasta que no se oye nada más.",
+      "imagen": "Spam canned meat"
+    },
+    {
+      "texto": "Los primeros usuarios de internet empezaron a llamar así a los mensajes repetidos que lo tapaban todo. Es la explicación más aceptada. Pero nadie dejó escrito quién lo dijo primero.",
+      "imagen": "Usenet computer terminal"
+    },
+    {
+      "texto": "Así que tu bandeja de spam lleva el nombre de una canción de vikingos. Probablemente.",
+      "imagen": "spam email"
+    }
+  ],
+  "fuentes": [
+    "https://www.mentalfloss.com/language/words/why-we-call-unwanted-email-spam",
+    "https://cwiki.apache.org/confluence/display/SPAMASSASSIN/Spam"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

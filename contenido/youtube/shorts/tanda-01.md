@@ -1,14 +1,15 @@
 # Shorts · Tanda 1: «¿Sabías que…?»
 
-Diez Shorts de curiosidades de tecnología, con la voz de Dani. Cinco salen de los datos que había en
-los antiguos tutoriales de batería y pantalla del iPhone 13 (están en el historial de Git); los otros
+Diez Shorts de curiosidades de tecnología, con la voz de Dani. Cinco salieron de los datos de los
+antiguos tutoriales de batería y pantalla del iPhone 13 (están en el historial de Git); los otros
 cinco son nuevos.
 
-- **Duración:** 30–45 segundos cada uno, a 150 palabras por minuto.
-- **Puntuaciones:** `hookscore.py` solo lee inglés, así que se puntuó la traducción literal de cada
-  arranque. Las curiosidades puras puntúan bajo en «STAKES» porque no cuestan nada al espectador;
-  por eso los arranques dicen qué gana o pierde quien mira.
-- **Estado:** escritos, sin grabar. **Ningún Short se graba sin marcar antes su casilla de fuente.**
+- **Duración:** 30–45 segundos cada uno.
+- **Puntuaciones:** traducción literal al inglés pasada por `hookscore.py`.
+- **Fuentes:** comprobadas el 19 de octubre de 2026, con enlaces en cada Short. El Short 09 se
+  descartó porque las fuentes lo contradicen.
+- **Montaje:** automático, a partir de `datos/NN.json` (ver [`AUTOMATIZACION.md`](../AUTOMATIZACION.md)).
+  El texto de cada Short en su archivo de datos es el que se locuta.
 
 ## Orden de publicación
 
@@ -22,7 +23,7 @@ cinco son nuevos.
 | 06 | El primer iPhone sin App Store | 58 | Vie 30 oct |
 | 07 | El modo oscuro y el OLED | 56 | Dom 1 nov |
 | 08 | Wi-Fi no significa nada | 47 | Reserva |
-| 09 | El auricular va en la pantalla | 47 | Reserva |
+| 09 | ~~El auricular va en la pantalla~~ | — | **Descartado** |
 | 10 | El rey vikingo del Bluetooth | 43 | Reserva |
 
 ---
@@ -30,267 +31,151 @@ cinco son nuevos.
 ## 01 · La batería que tu iPhone detecta · 64
 
 - **Título:** ¿Sabías que tu iPhone detecta baterías que no son de Apple?
-- **Texto en pantalla (0–2 s):** ¿BATERÍA FALSA?
-- **Fuente a comprobar:** [ ] página de soporte de Apple sobre los mensajes de batería; captura real
-  del aviso en un iPhone con batería no original y su texto exacto en español.
+- **Texto en pantalla:** ¿BATERÍA FALSA?
+- **Fuentes:** [Engadget](https://www.engadget.com/2019/08/08/apple-battery-iphone-warning/) ·
+  [AppleInsider](https://forums.appleinsider.com/discussion/212369) ·
+  [MobileSyrup](https://mobilesyrup.com/2019/08/14/apple-responds-third-party-battery-ios-warning-statement/)
+- **Lo que dicen:** si la batería no se puede verificar, en Ajustes > Batería > Salud sale un aviso y
+  deja de mostrarse la salud. El móvil sigue funcionando.
+- **Ojo:** el aviso también puede salir con una batería original si no la instala Apple o un servicio
+  autorizado. El guion lo dice. Las fuentes son de 2019; el comportamiento puede variar con iOS.
 
-```
-[EN PANTALLA: iPhone en Ajustes > Batería > Salud de la batería, zoom al aviso.]
-¿Sabías que tu iPhone sabe si le han puesto una batería que no es de Apple?
-Y antes de cambiarla, deberías saber qué pierdes.
-
-[EN PANTALLA: el aviso, más grande.]
-Si la batería no es de Apple, en Ajustes te sale un aviso: el iPhone no puede
-verificarla.
-
-[EN PANTALLA: el móvil funcionando normal, cargando.]
-Y aquí viene lo raro: el móvil funciona igual y carga igual. Pero puede dejar
-de enseñarte la salud de la batería.
-
-[EN PANTALLA: vuelta a la pantalla del principio.]
-Así que, antes de cambiarla, ya sabes qué vas a ver aquí.
-```
-
-**Bucle:** «qué vas a ver aquí» vuelve al aviso del primer plano.
-
----
+> ¿Sabías que tu iPhone sabe si le han puesto una batería que no es de Apple? Y antes de cambiarla,
+> deberías saber qué pierdes. · Si la batería no es de Apple, o no la ha instalado un servicio
+> autorizado, en Ajustes te sale un aviso: el iPhone no puede verificarla. · Y aquí viene lo raro:
+> el móvil funciona igual y carga igual. Pero deja de enseñarte la salud de la batería. · Así que,
+> antes de cambiarla, ya sabes qué vas a ver en Ajustes.
 
 ## 02 · El primer SMS · 60
 
 - **Título:** ¿Sabías que el primer SMS decía «Merry Christmas»?
 - **Texto en pantalla:** 1992
-- **Fuente a comprobar:** [ ] fecha (3 de diciembre de 1992), quién lo envió (Neil Papworth), que
-  salió de un ordenador y que el destinatario no podía contestar.
+- **Fuentes:** [NPR](https://www.npr.org/2017/12/04/568393428/the-first-text-messages-celebrates-25-years) ·
+  [History.com](https://www.history.com/this-day-in-history/december-3/first-sms-text-message-sent) ·
+  [Wikipedia: Neil Papworth](https://en.wikipedia.org/wiki/Neil_Papworth)
+- **Lo que dicen:** el 3 de diciembre de 1992, Neil Papworth envió «Merry Christmas» desde un
+  ordenador a Richard Jarvis, de Vodafone. Los móviles de entonces no podían contestar.
 
-```
-[EN PANTALLA: un móvil antiguo sobre el tapete. Texto «Merry Christmas» apareciendo letra a letra.]
-¿Sabías que el primer SMS de la historia decía «Merry Christmas»?
-Fue en 1992. Pero nadie pudo contestarlo. ¿Por qué?
-
-[EN PANTALLA: un teclado de ordenador.]
-Porque no salió de un móvil. Lo mandó un ingeniero desde un ordenador.
-
-[EN PANTALLA: el móvil antiguo.]
-Y el que lo recibió tenía un móvil que podía recibir mensajes, pero no enviarlos.
-
-[EN PANTALLA: el texto «Merry Christmas» otra vez.]
-Así que el primer SMS de la historia se quedó sin respuesta.
-```
-
-**Bucle:** «sin respuesta» devuelve a la pregunta del arranque.
-
----
+> ¿Sabías que el primer SMS de la historia decía «Merry Christmas»? Fue en 1992. Pero nadie pudo
+> contestarlo. ¿Por qué? · Porque no salió de un móvil. Lo mandó un ingeniero, Neil Papworth, desde
+> un ordenador. · Y el que lo recibió tenía un móvil que podía recibir mensajes, pero no enviarlos.
+> · Así que el primer SMS de la historia se quedó sin respuesta.
 
 ## 03 · La luz que ve la cámara · 60
 
 - **Título:** ¿Sabías que tu cámara ve una luz que tú no ves?
 - **Texto en pantalla:** PRUÉBALO
-- **Fuente a comprobar:** [ ] que los mandos a distancia usan luz infrarroja; probarlo en los móviles
-  que salgan en el vídeo (en muchos se ve mejor con la cámara frontal, en otros no se ve).
+- **Fuentes:** [American Association of Chemistry Teachers](https://teachchemistry.org/classroom-resources/investigating-infrared-light) ·
+  [Cambridge Audio](https://www.cambridgeaudio.com/eur/en/faqs/why-isnt-my-tv2-remote-control-working)
+- **Lo que dicen:** los mandos usan luz infrarroja, invisible para el ojo, y la cámara del móvil
+  puede mostrarla. No funciona en todos los móviles; a veces se ve mejor con la cámara frontal.
 
-```
-[EN PANTALLA: un mando de la tele apuntando a la cámara. Nada visible a simple vista.]
-¿Sabías que la cámara de tu móvil puede ver una luz que tus ojos no verán nunca?
-Coge el mando de la tele antes de seguir.
-
-[EN PANTALLA: la pantalla del móvil grabando el mando. Se ve el destello al pulsar.]
-Apunta el mando a la cámara y pulsa un botón. ¿Lo ves? Esa luz es infrarroja.
-Tus ojos no la captan. La cámara, sí.
-
-[EN PANTALLA: probar con la cámara frontal y la trasera.]
-Ojo: en algunos móviles se ve mejor con la cámara de delante, y en otros no se
-ve. Pruébalo con las dos.
-
-[EN PANTALLA: el mando otra vez, sin destello a simple vista.]
-Así que esa luz siempre ha estado ahí. Tú no la veías.
-```
-
-**Bucle:** «siempre ha estado ahí» vuelve al mando sin luz del principio.
-
----
+> ¿Sabías que la cámara de tu móvil puede ver una luz que tus ojos no verán nunca? Coge el mando de
+> la tele antes de seguir. · Apunta el mando a la cámara del móvil y pulsa un botón. Esa luz es
+> infrarroja. Tus ojos no la captan. La cámara, sí. · Ojo: no funciona en todos los móviles. A veces
+> se ve mejor con la cámara de delante. Pruébalo con las dos. · Así que esa luz siempre ha estado
+> ahí. Tú no la veías.
 
 ## 04 · La pantalla que se ve más fría · 64
 
 - **Título:** ¿Sabías que una pantalla cambiada puede verse más fría?
 - **Texto en pantalla:** ¿MÁS FRÍA?
-- **Fuente a comprobar:** [ ] que se pierde el True Tone con una pantalla sin emparejar y en qué
-  versiones de iOS; grabar la comparación real con dos móviles bajo la misma luz cálida.
+- **Fuentes:** [iFixit Answers](https://ifixit.com/Answers/View/511596/Why+isn't+true+tone+display+available+with+a+iFixit+replacement+screen) ·
+  [iFixit: restaurar True Tone](https://proxy.ifixit.com/Guide/How+To+Restore+True+Tone+After+Screen+Replacement+On+iPhone+XS/128934)
+- **Lo que dicen:** desde el iPhone X, el True Tone se desactiva con una pantalla que no es la
+  original del móvil, salvo que se copien sus datos con un programador o repare Apple.
+- **Ojo:** no hay documento de Apple que lo explique; las fuentes son de reparadores.
 
-```
-[EN PANTALLA: dos iPhone iguales bajo luz cálida. Uno se ve más azulado.]
-¿Sabías que una pantalla de iPhone cambiada puede verse más fría?
-Puede que hayas perdido el True Tone, y casi nadie sabe por qué.
-
-[EN PANTALLA: Ajustes > Pantalla y brillo. El True Tone activado en uno; en el otro, no aparece.]
-El True Tone ajusta los colores a la luz que hay a tu alrededor. Con una
-pantalla que no es la que traía el móvil, puede desaparecer.
-
-[EN PANTALLA: los dos móviles otra vez.]
-El móvil funciona perfecto. Simplemente, ya no adapta los colores. Por eso,
-con luz cálida, se ve más azul.
-
-[EN PANTALLA: zoom al móvil más azulado.]
-Así que no, no es tu vista. Es la pantalla.
-```
-
-**Bucle:** «es la pantalla» responde al «¿más fría?» del principio.
-
----
+> ¿Sabías que una pantalla de iPhone cambiada puede verse más fría? Puede que hayas perdido el True
+> Tone, y casi nadie sabe por qué. · El True Tone ajusta los colores a la luz que hay a tu alrededor.
+> Con una pantalla que no es la que traía el móvil, desaparece. · El móvil funciona perfecto.
+> Simplemente, ya no adapta los colores. Por eso, con luz cálida, se ve más azul. · Así que no, no
+> es tu vista. Es la pantalla.
 
 ## 05 · La batería por debajo del 25 % · 60
 
-- **Título:** ¿Sabías que los técnicos descargan tu batería antes de abrir el móvil?
+- **Título:** ¿Sabías que antes de reparar un móvil hay que descargar la batería?
 - **Texto en pantalla:** ¿POR QUÉ 25 %?
-- **Fuente a comprobar:** [ ] guía de reparación que recomiende descargar por debajo del 25 % y el
-  motivo (riesgo de incendio si se perfora una batería cargada).
+- **Fuentes:** [iFixit: precauciones de seguridad](https://www.ifixit.com/Guide/Safety+Precautions/176622)
+- **Lo que dice:** las guías de iFixit piden descargar la batería por debajo del 25 % antes de
+  reparar, porque una batería de litio cargada puede arder si se daña.
+- **Ojo:** el 25 % es la recomendación de iFixit, no una norma general. El guion lo dice así. Solo
+  hay una fuente porque el dato es, precisamente, lo que recomienda iFixit.
 
-```
-[EN PANTALLA: indicador de batería bajando hasta el 24 %.]
-¿Sabías que los técnicos descargan tu batería por debajo del 25 % antes de abrir
-el móvil? ¿Por qué? Porque una batería llena puede arder.
-
-[EN PANTALLA: una batería de móvil sobre el tapete.]
-Si una batería se perfora o se dobla mientras la sacas, puede calentarse muy
-rápido. Y cuanta más carga tiene, más energía puede soltar de golpe.
-
-[EN PANTALLA: el indicador al 24 %, y el móvil apagándose.]
-Por eso, antes de tocar un tornillo, se descarga. Y se apaga el móvil.
-
-[EN PANTALLA: el indicador otra vez.]
-Así que, si te lo devuelven con poca batería, ya sabes por qué.
-```
-
-**Bucle:** «con poca batería» vuelve al indicador del principio.
-
----
+> ¿Sabías que las guías de reparación piden descargar la batería por debajo del 25 % antes de abrir
+> el móvil? ¿Por qué? Porque una batería cargada puede arder. · Si una batería de litio se perfora o
+> se dobla mientras la sacas, puede incendiarse. Y cuanta más carga tiene, más energía puede soltar
+> de golpe. · Por eso guías como las de iFixit lo piden antes de tocar un tornillo. Y además, apagar
+> el móvil. · Así que, si un técnico te pide el móvil con poca batería, ya sabes por qué.
 
 ## 06 · El primer iPhone sin App Store · 58
 
 - **Título:** ¿Sabías que el primer iPhone no tenía App Store?
 - **Texto en pantalla:** 2007
-- **Fuente a comprobar:** [ ] fecha de lanzamiento del primer iPhone (2007) y de la App Store (2008).
+- **Fuentes:** [iMore: historia de la App Store](https://www.imore.com/history-app-store) ·
+  [MacRumors](https://macrumors.com/2022/12/23/missing-iphone-features) ·
+  [Applesfera](https://www.applesfera.com/curiosidades/que-iphone-original-no-tenia-app-store-como-cambio-vision-jobs-apps-terceros)
+- **Lo que dicen:** el primer iPhone (2007) no tenía App Store; Apple proponía apps web en Safari.
+  Jobs cambió de idea en octubre de 2007 y la App Store abrió el 10 de julio de 2008 con unas 500
+  apps.
 
-```
-[EN PANTALLA: la pantalla de inicio de un iPhone, vaciándose de apps.]
-¿Sabías que el primer iPhone, en 2007, no tenía App Store?
-¿Por qué te hizo Apple esperar un año entero?
-
-[EN PANTALLA: unas pocas apps en la pantalla de inicio.]
-Al principio, el iPhone solo traía las apps de Apple. Nada más.
-
-[EN PANTALLA: la App Store abriéndose.]
-La App Store llegó en 2008. Y a partir de ahí, el móvil se convirtió en lo que
-es hoy: algo que hace lo que tú le instales.
-
-[EN PANTALLA: la pantalla de inicio llena de apps.]
-Así que todas estas apps empezaron con un móvil que no podía instalar ninguna.
-```
-
-**Bucle:** «no podía instalar ninguna» devuelve a la pantalla vacía del principio.
-
-**Nota:** el porqué de la espera no está claro en una sola fuente. El guion no lo explica; solo
-cuenta el hecho. No añadas una razón sin fuente.
-
----
+> ¿Sabías que el primer iPhone, en 2007, no tenía App Store? ¿Por qué te hizo Apple esperar un año
+> entero? · Al principio, Steve Jobs quería que las apps de otras empresas fueran páginas web,
+> abiertas desde Safari. · En octubre de 2007 cambió de idea. Y la App Store llegó en julio de 2008,
+> con unas quinientas apps. · Así que todas las apps que usas empezaron con un móvil que no podía
+> instalar ninguna.
 
 ## 07 · El modo oscuro y el OLED · 56
 
 - **Título:** ¿Sabías que el modo oscuro solo ahorra batería en algunas pantallas?
 - **Texto en pantalla:** ¿OLED O LCD?
-- **Fuente a comprobar:** [ ] que en OLED los píxeles negros se apagan y en LCD la retroiluminación
-  sigue encendida; cómo saber qué pantalla tiene un móvil.
+- **Fuentes:** [Engadget](https://www.engadget.com/2019/10/21/dark-mode-ios-13-test/) ·
+  [Business Insider](https://businessinsider.nl/dark-mode-can-save-battery-but-only-if-your-device-has-an-oled-screen-heres-what-you-should-know/) ·
+  [ScienceABC](https://www.scienceabc.com/innovation/does-the-dark-mode-on-the-computer-actually-save-electricity.html)
+- **Lo que dicen:** en OLED los píxeles negros se apagan; en LCD la retroiluminación sigue
+  encendida, así que el ahorro es mínimo.
+- **Ojo:** el ahorro real en OLED varía mucho según el brillo. El guion no da cifras.
 
-```
-[EN PANTALLA: dos móviles con modo oscuro. En uno, el negro es negro de verdad; en el otro, gris.]
-¿Sabías que el modo oscuro puede ahorrarte batería, pero solo en pantallas OLED?
-En la tuya, puede que no ahorre casi nada.
-
-[EN PANTALLA: zoom a la pantalla OLED.]
-En una pantalla OLED, cada píxel da su propia luz. Si es negro, se apaga. Y un
-píxel apagado no gasta.
-
-[EN PANTALLA: zoom a la pantalla LCD.]
-En una LCD, hay una luz detrás de toda la pantalla, siempre encendida. El negro
-tapa esa luz, pero la luz sigue gastando.
-
-[EN PANTALLA: los dos móviles otra vez.]
-Así que, antes de poner el modo oscuro para ahorrar, mira qué pantalla tienes.
-```
-
-**Bucle:** «qué pantalla tienes» responde al «¿OLED o LCD?» del principio.
-
----
+> ¿Sabías que el modo oscuro puede ahorrarte batería, pero solo en pantallas OLED? En la tuya, puede
+> que no ahorre casi nada. · En una pantalla OLED, cada píxel da su propia luz. Si es negro, se
+> apaga. Y un píxel apagado no gasta. · En una LCD, hay una luz detrás de toda la pantalla, siempre
+> encendida. El negro tapa esa luz, pero la luz sigue gastando. · Así que, antes de poner el modo
+> oscuro para ahorrar, mira qué pantalla tienes.
 
 ## 08 · Wi-Fi no significa nada · 47 · Reserva
 
 - **Título:** ¿Sabías que Wi-Fi no significa nada?
 - **Texto en pantalla:** ¿WIRELESS FIDELITY?
-- **Fuente a comprobar:** [ ] que «Wi-Fi» fue un nombre comercial creado por una agencia de marcas y
-  que lo de «wireless fidelity» se añadió después como eslogan.
+- **Fuentes:** [Interbrand](https://interbrand.com/work/wi-fi) ·
+  [The Hustle](https://thehustle.co/wi-fi-doesnt-stand-for-anything) ·
+  [Tom's Guide](https://www.tomsguide.com/features/think-you-know-what-wi-fi-stands-for-get-ready-for-a-surprise)
+- **Lo que dicen:** Interbrand creó el nombre como guiño a «hi-fi»; «The Standard for Wireless
+  Fidelity» fue un eslogan que se usó al principio y se abandonó.
 
-```
-[EN PANTALLA: el icono de Wi-Fi del móvil.]
-¿Sabías que Wi-Fi no significa nada? Casi todo el mundo se equivoca. Te digo
-lo que es de verdad.
+> ¿Sabías que Wi-Fi no significa nada? Casi todo el mundo se equivoca. Te digo lo que es de verdad.
+> · No es «wireless fidelity». Es un nombre de marca que inventó una agencia, Interbrand, porque
+> sonaba bien. Un guiño a «hi-fi». · Lo de «wireless fidelity» fue un eslogan que se usó al
+> principio y se abandonó. Pero ya se había quedado. · Así que lo que usas cada día es, sobre todo,
+> un nombre que sonaba bien.
 
-[EN PANTALLA: «Wireless Fidelity» tachado.]
-No es «wireless fidelity». Es un nombre de marca, como el de cualquier producto.
-Se eligió porque sonaba bien y era fácil de recordar.
+## 09 · El auricular va en la pantalla · Descartado
 
-[EN PANTALLA: el icono otra vez.]
-Lo de «wireless fidelity» se usó después como eslogan, y por eso se quedó.
-
-[EN PANTALLA: el icono de Wi-Fi.]
-Así que lo que usas cada día es, sobre todo, un nombre que sonaba bien.
-```
-
----
-
-## 09 · El auricular va en la pantalla · 47 · Reserva
-
-- **Título:** ¿Sabías que el auricular del iPhone va pegado a la pantalla?
-- **Texto en pantalla:** ¿Y LAS LLAMADAS?
-- **Fuente a comprobar:** [ ] que en el iPhone 13 el auricular y los sensores van con la pantalla y
-  qué deja de funcionar si no se pasan al cambiarla. Era el dato clave del antiguo vídeo de la
-  pantalla y nunca se llegó a comprobar.
-
-```
-[EN PANTALLA: una pantalla de iPhone boca abajo. Zoom a la pieza de arriba.]
-¿Sabías que el auricular de tu iPhone va pegado a la pantalla? ¿Por qué importa?
-Porque una reparación barata te puede dejar sin oír las llamadas.
-
-[EN PANTALLA: pinzas pasando la pieza a una pantalla nueva.]
-Cuando se cambia la pantalla, esta pieza tiene que pasar de la vieja a la nueva.
-Muchas pantallas de repuesto no la traen.
-
-[EN PANTALLA: el móvil haciendo una llamada.]
-Si no se pasa, el móvil enciende y se ve perfecto. Pero no oyes por el auricular.
-
-[EN PANTALLA: la pieza otra vez.]
-Así que, si te cambian la pantalla, pregunta por esta pieza.
-```
-
----
+Las fuentes lo contradicen: en el iPhone 13 el auricular es una pieza separada del conjunto de
+sensores, y lo que pasa con el Face ID al cambiar la pantalla está en disputa
+([iFixit Answers](https://ifixit.com/Answers/View/752871/Will+replacing+front+earpiece+speaker+affect+face+id+on+iPhone+13)).
+No tiene archivo de datos y no se monta.
 
 ## 10 · El rey vikingo del Bluetooth · 43 · Reserva
 
 - **Título:** ¿Sabías que Bluetooth se llama así por un rey vikingo?
 - **Texto en pantalla:** HARALD
-- **Fuente a comprobar:** [ ] Harald «Diente Azul», rey de Dinamarca en el siglo X; que el logo une
-  sus iniciales en runas.
+- **Fuentes:** [Bluetooth SIG: origen del nombre](https://www.bluetooth.com/about-us/bluetooth-origin/) ·
+  [Skjalden](https://skjalden.com/why-is-bluetooth-called-bluetooth/)
+- **Lo que dicen:** el nombre viene de Harald «Diente Azul», rey danés del siglo X que unió Dinamarca
+  y Noruega; se propuso en 1997 como nombre provisional. El logo une sus iniciales en runas.
 
-```
-[EN PANTALLA: el icono de Bluetooth del móvil.]
-¿Sabías que Bluetooth se llama así por Harald, un rey vikingo que murió hace
-más de mil años? Y ves sus iniciales cada día.
-
-[EN PANTALLA: «Bluetooth» = «Diente Azul».]
-Le llamaban «Diente Azul». Unió a pueblos que no se entendían entre sí.
-
-[EN PANTALLA: el logo, separándose en dos runas.]
-Por eso le pusieron su nombre a una tecnología que conecta aparatos distintos.
-Y el logo son sus iniciales, escritas en runas.
-
-[EN PANTALLA: el icono otra vez.]
-Así que cada vez que conectas los cascos, saludas a un rey vikingo.
-```
+> ¿Sabías que Bluetooth se llama así por Harald, un rey vikingo que murió hace más de mil años? Y ves
+> sus iniciales cada día. · Le llamaban «Diente Azul». Unió a Dinamarca y Noruega en un solo reino.
+> · Por eso, en 1997, unos ingenieros le pusieron su nombre a una tecnología que une aparatos
+> distintos. Y el logo junta sus iniciales en runas. · Así que cada vez que conectas los cascos,
+> saludas a un rey vikingo.

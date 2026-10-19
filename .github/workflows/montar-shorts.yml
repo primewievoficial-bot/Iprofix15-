@@ -1,0 +1,88 @@
+name: Montar Shorts
+
+# Monta en vídeo cada Short de contenido/youtube/shorts/datos/ que todavía no tenga su release
+# «short-NN», y lo publica como release con el MP4 y la descripción (fuentes y atribución de
+# imágenes). Ver contenido/youtube/AUTOMATIZACION.md.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "contenido/youtube/shorts/datos/**"
+      - "herramientas/shorts/**"
+      - ".github/workflows/montar-shorts.yml"
+  schedule:
+    # Jueves a las 10:30 UTC, después de la tarea programada que escribe los Shorts.
+    - cron: "30 10 * * 4"
+  workflow_dispatch:
+    inputs:
+      rehacer:
+        description: "Número de un Short para volver a montarlo (por ejemplo 11). Vacío: solo los pendientes."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: montar-shorts
+  cancel-in-progress: false
+
+jobs:
+  montar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar ffmpeg y fuentes
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core jq
+
+      - name: Instalar dependencias
+        run: pip install -r herramientas/shorts/requirements.txt
+
+      - name: Elegir los Shorts pendientes
+        id: pendientes
+        run: |
+          rehacer="${{ github.event.inputs.rehacer }}"
+          if [ -n "$rehacer" ]; then
+            id=$(printf '%02d' "$rehacer")
+            gh release delete "short-$id" --yes --cleanup-tag 2>/dev/null || true
+          fi
+          lista=""
+          for f in contenido/youtube/shorts/datos/*.json; do
+            id=$(jq -r .id "$f")
+            if ! gh release view "short-$id" >/dev/null 2>&1; then
+              lista="$lista $f"
+            fi
+          done
+          echo "Pendientes:${lista:- ninguno}"
+          echo "lista=$lista" >> "$GITHUB_OUTPUT"
+
+      - name: Montar y publicar
+        if: steps.pendientes.outputs.lista != ''
+        run: |
+          fallos=0
+          for f in ${{ steps.pendientes.outputs.lista }}; do
+            id=$(jq -r .id "$f")
+            titulo=$(jq -r .titulo "$f")
+            if python3 herramientas/shorts/montar.py "$f" --salida salida; then
+              gh release create "short-$id" "salida/$id.mp4" "salida/$id-descripcion.txt" \
+                --title "Short $id · $titulo" --notes-file "salida/$id-descripcion.txt"
+            else
+              echo "::warning::No se pudo montar el Short $id"
+              fallos=$((fallos + 1))
+            fi
+          done
+          if [ "$fallos" -gt 0 ]; then
+            echo "::error::$fallos Short(s) sin montar. Se reintentarán en la próxima ejecución."
+            exit 1
+          fi

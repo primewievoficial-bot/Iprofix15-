@@ -1,0 +1,34 @@
+{
+  "id": "02",
+  "titulo": "¿Sabías que el primer SMS decía «Merry Christmas»?",
+  "texto_pantalla": "1992",
+  "publicacion": "2026-10-23",
+  "bloques": [
+    {
+      "texto": "¿Sabías que el primer SMS de la historia decía «Merry Christmas»? Fue en 1992. Pero nadie pudo contestarlo. ¿Por qué?",
+      "imagen": "Orbitel 901 mobile phone"
+    },
+    {
+      "texto": "Porque no salió de un móvil. Lo mandó un ingeniero, Neil Papworth, desde un ordenador.",
+      "imagen": "1990s personal computer"
+    },
+    {
+      "texto": "Y el que lo recibió tenía un móvil que podía recibir mensajes, pero no enviarlos.",
+      "imagen": "1990s mobile phone"
+    },
+    {
+      "texto": "Así que el primer SMS de la historia se quedó sin respuesta.",
+      "imagen": "SMS text message phone screen"
+    }
+  ],
+  "fuentes": [
+    "https://www.npr.org/2017/12/04/568393428/the-first-text-messages-celebrates-25-years",
+    "https://www.history.com/this-day-in-history/december-3/first-sms-text-message-sent",
+    "https://en.wikipedia.org/wiki/Neil_Papworth"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

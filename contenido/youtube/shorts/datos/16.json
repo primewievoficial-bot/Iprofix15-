@@ -1,0 +1,33 @@
+{
+  "id": "16",
+  "titulo": "¿Sabías que la @ del correo la eligió un solo ingeniero?",
+  "texto_pantalla": "¿POR QUÉ @?",
+  "publicacion": "2026-11-11",
+  "bloques": [
+    {
+      "texto": "¿Sabías que la arroba de tu correo la eligió en 1971 un solo ingeniero? ¿Por qué ese símbolo y no otro?",
+      "imagen": "at sign"
+    },
+    {
+      "texto": "Se llamaba Ray Tomlinson. Había conseguido mandar un mensaje de un ordenador a otro, y necesitaba separar el nombre de la persona del nombre del ordenador.",
+      "imagen": "Ray Tomlinson"
+    },
+    {
+      "texto": "La arroba ya se usaba en inglés para decir «a tanto la unidad», así que se leía como «en». No aparecía en ningún nombre, y estaba en el teclado sin hacer nada.",
+      "imagen": "vintage computer keyboard"
+    },
+    {
+      "texto": "Así que tu dirección dice, literalmente, «tú, en tu servidor».",
+      "imagen": "email address"
+    }
+  ],
+  "fuentes": [
+    "https://www.npr.org/2016/03/06/469428062/ray-tomlinson-inventor-of-modern-email-has-died",
+    "https://csmonitor.com/Technology/2016/0307/Remembering-Ray-Tomlinson-the-man-who-created-e-mail-and"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

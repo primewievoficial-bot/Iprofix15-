@@ -1,0 +1,33 @@
+{
+  "id": "20",
+  "titulo": "¿Sabías que ayudaste a digitalizar periódicos sin saberlo?",
+  "texto_pantalla": "¿CAPTCHA?",
+  "publicacion": null,
+  "bloques": [
+    {
+      "texto": "¿Sabías que probablemente trabajaste gratis para The New York Times? Cada vez que escribías esas palabras raras, ayudabas. Pero ¿cómo?",
+      "imagen": "CAPTCHA"
+    },
+    {
+      "texto": "Los captchas antiguos te enseñaban dos palabras. Una, el sistema ya la sabía: servía para comprobar que eras una persona.",
+      "imagen": "reCAPTCHA"
+    },
+    {
+      "texto": "La otra salía de libros y periódicos antiguos escaneados, y el ordenador no sabía leerla. Cuando muchas personas escribían lo mismo, esa palabra quedaba digitalizada.",
+      "imagen": "old newspaper archive"
+    },
+    {
+      "texto": "Así que, mientras demostrabas que no eras un robot, hacías el trabajo que un robot no sabía hacer.",
+      "imagen": "robot"
+    }
+  ],
+  "fuentes": [
+    "https://www.npr.org/2008/08/14/93605988/web-security-words-help-digitize-old-books",
+    "https://www.sciencedaily.com/releases/2008/08/080814154329.htm"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "19",
+  "titulo": "¿Sabías que tu iPhone puede dejar de cargar al 80 % a propósito?",
+  "texto_pantalla": "¿ROTO? NO",
+  "publicacion": null,
+  "bloques": [
+    {
+      "texto": "¿Sabías que tu iPhone puede dejar de cargar al 80 % a propósito? No está roto. Está cuidando la batería.",
+      "imagen": "iPhone charging"
+    },
+    {
+      "texto": "Se llama carga optimizada, y viene activada. El iPhone aprende cuándo lo dejas enchufado mucho rato, por ejemplo por la noche.",
+      "imagen": "smartphone charging night bedside"
+    },
+    {
+      "texto": "Entonces se para en el 80 % y termina de cargar justo antes de que lo desenchufes. Pasar menos tiempo al 100 % gasta menos la batería.",
+      "imagen": "lithium-ion battery"
+    },
+    {
+      "texto": "Así que, si lo ves parado en el 80 %, déjalo. Sabe lo que hace.",
+      "imagen": "phone charger cable"
+    }
+  ],
+  "fuentes": [
+    "https://support.apple.com/ht210512",
+    "https://www.macworld.com/article/2192003/best-iphone-feature-youre-not-using-80-charging-limit.html"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

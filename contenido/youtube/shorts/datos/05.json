@@ -1,0 +1,32 @@
+{
+  "id": "05",
+  "titulo": "¿Sabías que antes de reparar un móvil hay que descargar la batería?",
+  "texto_pantalla": "¿POR QUÉ 25 %?",
+  "publicacion": "2026-10-28",
+  "bloques": [
+    {
+      "texto": "¿Sabías que las guías de reparación piden descargar la batería por debajo del 25 % antes de abrir el móvil? ¿Por qué? Porque una batería cargada puede arder.",
+      "imagen": "smartphone repair"
+    },
+    {
+      "texto": "Si una batería de litio se perfora o se dobla mientras la sacas, puede incendiarse. Y cuanta más carga tiene, más energía puede soltar de golpe.",
+      "imagen": "lithium-ion battery"
+    },
+    {
+      "texto": "Por eso guías como las de iFixit lo piden antes de tocar un tornillo. Y además, apagar el móvil.",
+      "imagen": "smartphone disassembly tools"
+    },
+    {
+      "texto": "Así que, si un técnico te pide el móvil con poca batería, ya sabes por qué.",
+      "imagen": "phone low battery"
+    }
+  ],
+  "fuentes": [
+    "https://www.ifixit.com/Guide/Safety+Precautions/176622"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

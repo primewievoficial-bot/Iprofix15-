@@ -1,0 +1,34 @@
+{
+  "id": "08",
+  "titulo": "¿Sabías que Wi-Fi no significa nada?",
+  "texto_pantalla": "¿WIRELESS FIDELITY?",
+  "publicacion": null,
+  "bloques": [
+    {
+      "texto": "¿Sabías que Wi-Fi no significa nada? Casi todo el mundo se equivoca. Te digo lo que es de verdad.",
+      "imagen": "Wi-Fi logo sign"
+    },
+    {
+      "texto": "No es «wireless fidelity». Es un nombre de marca que inventó una agencia, Interbrand, porque sonaba bien. Un guiño a «hi-fi».",
+      "imagen": "wireless router"
+    },
+    {
+      "texto": "Lo de «wireless fidelity» fue un eslogan que se usó al principio y se abandonó. Pero ya se había quedado.",
+      "imagen": "hi-fi stereo"
+    },
+    {
+      "texto": "Así que lo que usas cada día es, sobre todo, un nombre que sonaba bien.",
+      "imagen": "Wi-Fi hotspot"
+    }
+  ],
+  "fuentes": [
+    "https://interbrand.com/work/wi-fi",
+    "https://thehustle.co/wi-fi-doesnt-stand-for-anything",
+    "https://www.tomsguide.com/features/think-you-know-what-wi-fi-stands-for-get-ready-for-a-surprise"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

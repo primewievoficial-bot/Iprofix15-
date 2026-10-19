@@ -1,0 +1,34 @@
+{
+  "id": "01",
+  "titulo": "¿Sabías que tu iPhone detecta baterías que no son de Apple?",
+  "texto_pantalla": "¿BATERÍA FALSA?",
+  "publicacion": "2026-10-21",
+  "bloques": [
+    {
+      "texto": "¿Sabías que tu iPhone sabe si le han puesto una batería que no es de Apple? Y antes de cambiarla, deberías saber qué pierdes.",
+      "imagen": "iPhone battery"
+    },
+    {
+      "texto": "Si la batería no es de Apple, o no la ha instalado un servicio autorizado, en Ajustes te sale un aviso: el iPhone no puede verificarla.",
+      "imagen": "iPhone settings screen"
+    },
+    {
+      "texto": "Y aquí viene lo raro: el móvil funciona igual y carga igual. Pero deja de enseñarte la salud de la batería.",
+      "imagen": "smartphone charging"
+    },
+    {
+      "texto": "Así que, antes de cambiarla, ya sabes qué vas a ver en Ajustes.",
+      "imagen": "lithium-ion battery smartphone"
+    }
+  ],
+  "fuentes": [
+    "https://www.engadget.com/2019/08/08/apple-battery-iphone-warning/",
+    "https://forums.appleinsider.com/discussion/212369",
+    "https://mobilesyrup.com/2019/08/14/apple-responds-third-party-battery-ios-warning-statement/"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

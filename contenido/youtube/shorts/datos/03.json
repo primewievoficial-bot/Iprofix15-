@@ -1,0 +1,33 @@
+{
+  "id": "03",
+  "titulo": "¿Sabías que tu cámara ve una luz que tú no ves?",
+  "texto_pantalla": "PRUÉBALO",
+  "publicacion": "2026-10-25",
+  "bloques": [
+    {
+      "texto": "¿Sabías que la cámara de tu móvil puede ver una luz que tus ojos no verán nunca? Coge el mando de la tele antes de seguir.",
+      "imagen": "television remote control"
+    },
+    {
+      "texto": "Apunta el mando a la cámara del móvil y pulsa un botón. Esa luz es infrarroja. Tus ojos no la captan. La cámara, sí.",
+      "imagen": "infrared LED remote control camera"
+    },
+    {
+      "texto": "Ojo: no funciona en todos los móviles. A veces se ve mejor con la cámara de delante. Pruébalo con las dos.",
+      "imagen": "smartphone front camera"
+    },
+    {
+      "texto": "Así que esa luz siempre ha estado ahí. Tú no la veías.",
+      "imagen": "infrared light"
+    }
+  ],
+  "fuentes": [
+    "https://teachchemistry.org/classroom-resources/investigating-infrared-light",
+    "https://www.cambridgeaudio.com/eur/en/faqs/why-isnt-my-tv2-remote-control-working"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "17",
+  "titulo": "¿Sabías que el primer «bug» de un ordenador era una polilla de verdad?",
+  "texto_pantalla": "1947",
+  "publicacion": "2026-11-13",
+  "bloques": [
+    {
+      "texto": "¿Sabías que el primer «bug» de un ordenador, en 1947, era una polilla de verdad? Pero la palabra «bug» es más antigua. ¿Por qué?",
+      "imagen": "first computer bug moth logbook"
+    },
+    {
+      "texto": "En un ordenador enorme de Harvard, el Mark II, encontraron una polilla atascada en una pieza. La sacaron y la pegaron en el cuaderno de registro con una nota: «primer caso real de bug encontrado».",
+      "imagen": "Harvard Mark computer"
+    },
+    {
+      "texto": "Fíjate en lo de «real». Lo escribieron como un chiste, porque los ingenieros ya llamaban «bugs», bichos, a los fallos desde hacía años.",
+      "imagen": "moth insect"
+    },
+    {
+      "texto": "Así que la polilla no inventó la palabra. Solo la hizo literal.",
+      "imagen": "computer error"
+    }
+  ],
+  "fuentes": [
+    "https://daily.jstor.org/the-bug-in-the-computer-bug-story/",
+    "https://www.pcgamer.com/first-actual-computer-bug/"
+  ],
+  "hashtags": [
+    "#SabíasQue",
+    "#Tecnología",
+    "#Shorts"
+  ]
+}

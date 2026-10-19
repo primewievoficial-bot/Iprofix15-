@@ -65,9 +65,13 @@ Rasgos:
 - **Idioma:** español de España, tuteo.
 - **Formato:** solo Shorts verticales, de 30 a 45 segundos.
 - **Apertura:** «¿Sabías que…?» en los dos primeros segundos, con el texto en pantalla.
-- **Cámara:** vertical. Manos y objetos sobre la mesa de trabajo (el móvil, el mando, el aparato del
-  que se habla) y grabaciones de pantalla. La cara aparece poco o nada.
-- **Mesa:** tapete antiestático oscuro, el mismo en todos los vídeos, para que el canal se reconozca.
+- **Nada se graba.** Cada Short se monta solo (`herramientas/shorts/montar.py`): una imagen con
+  licencia libre por bloque (Wikimedia Commons u Openverse), voz sintética (`es-ES-AlvaroNeural`),
+  subtítulos y el texto del gancho en amarillo.
+- **Escribir para ese montaje:** cuatro bloques por Short, cada uno con algo que se pueda buscar como
+  imagen (un objeto, un lugar, una persona conocida, un logo). Nada que dependa de enseñar una prueba
+  hecha a mano.
+- **La voz es sintética:** frases cortas, cifras escritas como se dicen cuando haga falta («unas
+  quinientas»), y nada de palabras que un sintetizador lea mal (siglas raras, emojis).
 - **Tacos:** no.
-- **Cierre:** una frase que enlaza con el principio. Sin llamada a la acción hablada; como mucho, un
-  texto final «Sígueme para más».
+- **Cierre:** una frase que enlaza con el principio. Sin llamada a la acción hablada.
