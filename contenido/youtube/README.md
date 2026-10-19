@@ -18,6 +18,11 @@ Nada de esto está publicado. Cada archivo es un borrador listo para grabar y su
 - [Semana del 19 al 25 de octubre](planes/semana-2026-10-19.md): ancla de la batería
 - [Semana del 26 de octubre al 1 de noviembre](planes/semana-2026-10-26.md): ancla de la pantalla
 
+## Auditorías
+
+- [19 de octubre: previa al lanzamiento](auditorias/2026-10-19-previa-lanzamiento.md). El arreglo:
+  comprobar los datos técnicos de los hooks antes de grabar.
+
 ## Antes de grabar cualquier vídeo
 
 Los datos técnicos de los guiones se escribieron de memoria, sin una guía de reparación delante.
