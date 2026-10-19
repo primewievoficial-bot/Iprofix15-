@@ -6,7 +6,7 @@
   "bloques": [
     {
       "texto": "¿Sabías que la arroba de tu correo la eligió en 1971 un solo ingeniero? ¿Por qué ese símbolo y no otro?",
-      "imagen": "arroba"
+      "imagen": "email address"
     },
     {
       "texto": "Se llamaba Ray Tomlinson. Había conseguido mandar un mensaje de un ordenador a otro, y necesitaba separar el nombre de la persona del nombre del ordenador.",
@@ -18,7 +18,7 @@
     },
     {
       "texto": "Así que tu dirección dice, literalmente, «tú, en tu servidor».",
-      "imagen": "email address"
+      "imagen": "email inbox"
     }
   ],
   "fuentes": [
