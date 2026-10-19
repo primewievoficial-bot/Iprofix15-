@@ -54,6 +54,13 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r herramientas/shorts/requirements.txt
 
+      # Voz de reserva por si el servicio de Microsoft rechaza edge-tts.
+      - name: Descargar la voz de reserva (Piper)
+        run: |
+          python3 -m piper.download_voices es_ES-davefx-medium --download-dir "$RUNNER_TEMP/piper" \
+            || echo "::warning::No se pudo descargar la voz de Piper"
+          echo "SHORTS_PIPER_MODELO=$RUNNER_TEMP/piper/es_ES-davefx-medium.onnx" >> "$GITHUB_ENV"
+
       - name: Elegir los Shorts pendientes
         id: pendientes
         run: |

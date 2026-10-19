@@ -28,6 +28,7 @@ UA = "iProfix15-shorts/1.0 (https://github.com/primewievoficial-bot/Iprofix15-)"
 FUENTE = next((f for f in ("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
                            "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf")
                if os.path.exists(f)), None)
+VOZ_USADA = None      # "edge" o "piper", para no mezclar voces dentro de un Short
 PAUSA = 0.25          # silencio entre bloques, en segundos
 PALABRAS_POR_SEG = 2.6  # solo para --sin-red
 
@@ -106,20 +107,43 @@ async def _tts(texto, ruta):
     import edge_tts
     await edge_tts.Communicate(texto, VOZ, rate="+8%").save(ruta)
 
+def _piper(texto, ruta):
+    """Voz de reserva, sin depender de Microsoft: Piper con el modelo de SHORTS_PIPER_MODELO."""
+    import wave
+    from piper import PiperVoice
+    modelo = os.environ.get("SHORTS_PIPER_MODELO")
+    if not modelo or not os.path.exists(modelo):
+        raise RuntimeError("no hay modelo de Piper (SHORTS_PIPER_MODELO)")
+    wav = ruta + ".wav"
+    with wave.open(wav, "wb") as w:
+        PiperVoice.load(modelo).synthesize_wav(texto, w)
+    run(["ffmpeg", "-y", "-i", wav, "-c:a", "libmp3lame", "-q:a", "3", ruta])
+    os.remove(wav)
+
 def generar_voz(texto, ruta, sin_red):
+    """Devuelve la duración. Primero edge-tts; si Microsoft lo rechaza, Piper."""
+    global VOZ_USADA
     if sin_red:
         dur = max(1.5, len(texto.split()) / PALABRAS_POR_SEG)
         run(["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", f"{dur:.2f}",
              "-c:a", "libmp3lame", "-q:a", "4", ruta])
-    else:
-        for intento in range(3):
+        return duracion(ruta)
+    errores = []
+    if VOZ_USADA != "piper":  # si edge-tts ya falló en este Short, no se insiste
+        for _ in range(2):
             try:
                 asyncio.run(_tts(texto, ruta))
-                break
+                VOZ_USADA = "edge"
+                return duracion(ruta)
             except Exception as e:
-                if intento == 2:
-                    raise RuntimeError(f"no se pudo generar la voz: {e}")
-    return duracion(ruta)
+                errores.append(f"edge-tts: {e}")
+    try:
+        _piper(texto, ruta)
+        VOZ_USADA = "piper"
+        return duracion(ruta)
+    except Exception as e:
+        errores.append(f"piper: {e}")
+    raise RuntimeError("no se pudo generar la voz. " + " | ".join(errores))
 
 
 # --- composición ---------------------------------------------------------------------------------
@@ -227,6 +251,8 @@ def clip_bloque(png, dur, ruta):
 # --- Short completo ------------------------------------------------------------------------------
 
 def montar(ruta_json, salida, sin_red):
+    global VOZ_USADA
+    VOZ_USADA = None
     with open(ruta_json, encoding="utf-8") as f:
         s = json.load(f)
     sid = s["id"]
@@ -278,7 +304,8 @@ def montar(ruta_json, salida, sin_red):
 
     with open(os.path.join(salida, f"{sid}-descripcion.txt"), "w", encoding="utf-8") as f:
         f.write(descripcion(s, atribuciones))
-    print(f"  -> {mp4} ({duracion(mp4):.1f} s, {len(atribuciones)} imágenes con licencia)")
+    print(f"  -> {mp4} ({duracion(mp4):.1f} s, {len(atribuciones)} imágenes con licencia, "
+          f"voz: {VOZ_USADA or 'silencio'})")
     shutil.rmtree(tmp, ignore_errors=True)
     return mp4
 
